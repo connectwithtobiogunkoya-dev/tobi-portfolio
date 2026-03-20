@@ -1,0 +1,327 @@
+/* ── COLOUR PALETTE & GLOBAL VARIABLES ── */
+:root {
+  --midnight:    #0b1120;
+  --midnight2:   #111827;
+  --midnight3:   #1a2540;
+  --blue-bright: #5b9cf6;
+  --blue-light:  #a8c5f0;
+  --white:       #ffffff;
+  --off-white:   #e8eef8;
+  --muted:       #8ba4c9;
+  --border:      rgba(168, 197, 240, 0.15);
+}
+
+/* ── RESET — removes browser default spacing ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── BASE BODY STYLES ── */
+body {
+  background-color: var(--midnight);
+  color: var(--white);
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+/* ── NAVIGATION ── */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 6%;
+  background-color: var(--midnight2);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+}
+
+nav p {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--white);
+}
+
+nav a {
+  background-color: var(--blue-bright);
+  color: var(--midnight);
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
+
+nav a:hover {
+  opacity: 0.85;
+}
+
+/* ── HERO ── */
+#hero {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6rem 6%;
+  border-bottom: 1px solid var(--border);
+}
+
+#hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.8rem;
+  font-weight: 900;
+  line-height: 1.1;
+  max-width: 820px;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+#hero p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: var(--off-white);
+  max-width: 520px;
+  margin-bottom: 2.5rem;
+}
+
+#hero a {
+  display: inline-block;
+  background-color: var(--blue-bright);
+  color: var(--midnight);
+  padding: 0.9rem 2.2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  width: fit-content;
+}
+
+#hero a:hover {
+  opacity: 0.88;
+}
+
+/* ── PROBLEMS ── */
+#problems {
+  padding: 6rem 6%;
+  background-color: var(--midnight2);
+}
+
+#problems h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1.25;
+  max-width: 700px;
+  color: var(--white);
+  margin-bottom: 3rem;
+}
+
+.problem-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: var(--midnight3);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.6rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-weight: 300;
+  line-height: 1.75;
+}
+
+.card:hover {
+  border-color: var(--blue-bright);
+}
+
+/* ── PROJECTS ── */
+#projects {
+  padding: 6rem 6%;
+}
+
+#projects h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 3rem;
+}
+
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* ── CONTACT ── */
+#contact {
+  padding: 6rem 6%;
+  background-color: var(--midnight2);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 1rem;
+  max-width: 600px;
+}
+
+#contact p {
+  color: var(--off-white);
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+}
+
+#contact a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.9rem 2rem;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin: 0.4rem;
+}
+
+#contact a:first-of-type {
+  background-color: var(--blue-bright);
+  color: var(--midnight);
+}
+
+#contact a:last-of-type {
+  border: 1.5px solid var(--border);
+  color: var(--off-white);
+}
+
+#contact a:hover {
+  opacity: 0.85;
+}
+
+/* Wrapper to keep buttons on same row */
+.contact-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ── FOOTER ── */
+footer {
+  padding: 2rem 6%;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+footer p {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+/* ────────────────────────────────
+   RESPONSIVE — TABLET (max 900px)
+──────────────────────────────── */
+@media (max-width: 900px) {
+
+  /* Projects: 3 columns → 2 columns */
+  .project-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Hero heading slightly smaller */
+  #hero h1 {
+    font-size: 2.8rem;
+  }
+
+}
+
+
+/* ────────────────────────────────
+   RESPONSIVE — MOBILE (max 600px)
+──────────────────────────────── */
+@media (max-width: 600px) {
+
+  /* Hero heading smaller on phone */
+  #hero h1 {
+    font-size: 2rem;
+  }
+
+  /* Hero section less top padding on small screens */
+  #hero {
+    padding: 4rem 5%;
+    min-height: auto;
+  }
+
+  /* Problem cards: 2 columns → 1 column */
+  .problem-cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* Project cards: 2 columns → 1 column */
+  .project-cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* Nav: shrink padding and logo text */
+  nav {
+    padding: 1rem 5%;
+  }
+
+  nav p {
+    font-size: 1rem;
+  }
+
+  /* Problems heading smaller */
+  #problems h2 {
+    font-size: 1.6rem;
+  }
+
+  /* Projects heading smaller */
+  #projects h2 {
+    font-size: 1.6rem;
+  }
+
+  /* Contact heading smaller */
+  #contact h2 {
+    font-size: 1.6rem;
+  }
+
+  /* Contact buttons stack vertically */
+  #contact a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0.4rem 0;
+  }
+
+  /* General section padding reduced */
+  #problems,
+  #projects,
+  #contact {
+    padding: 4rem 5%;
+  }
+
+}
