@@ -22,7 +22,7 @@
 <section id="hero">
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <p class="hero-tag">Product Manager · Fintech · HealthTech · EdTech</p>
+    <p class="hero-tag">Product Manager · UX · Tech · Business</p>
     <h1>Your Vision, Turned Into a Product <em>Users Actually Love.</em></h1>
     <p class="hero-desc">I bridge the gap between business goals and great products — translating strategy into execution, and execution into revenue. Available full-time or part-time.</p>
     <div class="hero-buttons">
@@ -93,7 +93,19 @@
     <footer>
       <p>© 2025 Tobi Ogunkoya · Product Manager</p>
     </footer>
+<script>
+  const cards = document.querySelectorAll('.card');
 
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.15 });
+
+  cards.forEach(card => observer.observe(card));
+</script>
   </body>
 
 </html>
